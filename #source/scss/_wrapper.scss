@@ -1,0 +1,21 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   min-height: 100%;
+}
+.page {
+   flex: 1 1 auto;
+}
+[class*="__container"] {
+   max-width: 1664px;
+   margin: 0 auto;
+   box-sizing: content-box;
+   padding: 0px 5px;
+}
+[class*="__body"] {
+   max-width: 1312px;
+   margin: 0 auto;
+   box-sizing: content-box;
+   padding: 0px 5px;
+}

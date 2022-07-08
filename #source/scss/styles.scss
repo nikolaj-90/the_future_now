@@ -1,0 +1,234 @@
+//!  ======================== Обнуление стилей
+@import "_nullstyles";
+/* //* ======================== Обертка и ограничивающий контейнер ======================== */
+@import "_wrapper";
+/* //* ======================== Image ibg ======================== */
+@import "_ibg";
+/* //* ======================== Бургер ======================== */
+@import "_brg";
+/* //* ======================== Pages ======================== */
+.page__future {
+}
+/* //* ======================== Header ======================== */
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 50;
+   background: rgba(25, 5, 10, 0.7);
+   &__container {
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      min-height: 64px;
+      align-items: center;
+      padding: 0px 5px;
+   }
+
+   &__logo {
+      min-width: 250px;
+      font-family: Vollkorn;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: calc(33 / 24 * 100%);
+      & a {
+         color: #f2f2f2;
+      }
+   }
+
+   &__navigation {
+   }
+
+   &__menu {
+   }
+}
+.menu {
+   display: flex;
+   flex-wrap: wrap;
+   &__item {
+      &:not(:last-child) {
+         margin: 0px 64px 0px 0px;
+      }
+   }
+
+   &__link {
+      font-family: Raleway;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: calc(28 / 24 * 100%);
+      color: #ffffff;
+   }
+}
+.header__burger {
+   display: none;
+   
+}
+
+@media (max-width: 860px) {
+   .header__burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      span {
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         left: 0;
+         top: 9px;
+         background-color: #fff;
+         transition: all 0.1s ease 0s;
+      }
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         left: 0;
+         background-color: #fff;
+         transition: all 0.2s ease 0s;
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      &.active span {
+         transform: scale(0);
+      }
+      &.active::before {
+         transform: rotate(46deg);
+         top: 9px;
+      }
+      &.active::after {
+         transform: rotate(-49deg);
+         bottom: 9px;
+      }
+   }
+}
+
+/* //* ======================== Section future ======================== */
+.future {
+   position: relative;
+   &__container {
+   }
+
+   &__content {
+      max-width: 720px;
+   }
+   &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+}
+.future-block {
+   position: relative;
+   z-index: 2;
+   padding: 208px 0px 217px 0px;
+
+   &__title {
+      font-family: Raleway;
+      font-weight: 500;
+      font-size: 144px;
+      line-height: calc(169 / 144 * 100%);
+      color: #fff;
+      &:not(:last-child) {
+         margin: 0px 0px 32px 0px;
+      }
+   }
+
+   &__subtitle {
+      font-family: Raleway;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: calc(28 / 27 * 100%);
+      color: #fff;
+      &:not(:last-child) {
+         margin: 0px 0px 96px 0px;
+      }
+   }
+
+   &__feedback {
+   }
+}
+.feedback {
+   &__form-text {
+      font-family: Raleway;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: calc(21 / 18 * 100%);
+      color: #fff;
+      &:not(:last-child) {
+         margin: 0px 0px 24px 0px;
+      }
+   }
+
+   &__email {
+      display: inline-flex;
+      min-width: 419px;
+      min-height: 56px;
+      border-radius: 16px;
+      border: rgba(89, 2, 9, 0) solid 1px;
+      font-family: Raleway;
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      padding: 0px 10px;
+      color: #fff;
+      background-color: #59020980;
+      margin-right: 48px;
+      &:focus {
+         background-color: #971b2580;
+      }
+      &:valid {
+         border-color: rgb(4, 241, 4);
+      }
+   }
+
+   &__submit {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 14px 84px;
+      border-radius: 16px;
+      font-family: Raleway;
+      font-weight: 300;
+      font-size: 18px;
+      color: #fff;
+      background-color: #024959;
+   }
+}
+
+.footer {
+   background-color: rgb(218, 243, 127);
+   .footer__container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      width: 300px;
+      padding: 10px 0px;
+      font-family: Raleway;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 25px;
+      color: brown;
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 8px;
+         left: -12px;
+         width: 100%;
+         border-bottom: #a52a2a solid 1px;
+      }
+   }
+}
