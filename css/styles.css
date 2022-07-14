@@ -525,20 +525,9 @@ body.lock {
 
 /* //* ======================== Section about ======================== */
 .about {
-  background: url("/image/section-about/About-us__background.png") 100% 88%/cover no-repeat;
   position: relative;
   z-index: 1;
   padding: 116px 0px 108px;
-  /*  &__img {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
-     img {
-        object-position: 100% 0;
-     }
-  } */
 }
 @media (max-width: 375px) {
   .about__container {
@@ -553,6 +542,17 @@ body.lock {
 .about__body {
   position: relative;
   z-index: 2;
+}
+.about__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.about__img img {
+  -o-object-position: 100% 88%;
+     object-position: 100% 88%;
 }
 
 .body-container {
@@ -646,20 +646,9 @@ body.lock {
 
 /* //* ======================== Section advanced ======================== */
 .advanced {
-  background: url("/image/section-advanced/background-advanced.png") 93% 5%/cover no-repeat;
+  /* background: url("/image/section-advanced/background-advanced.png") 93% 5% / cover no-repeat; */
   position: relative;
   padding: 219px 0px;
-  /* &__background {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
-     z-index: 1;
-     img {
-        object-position: 100% 0;
-     }
-  } */
 }
 @media (max-width: 768px) {
   .advanced {
@@ -733,6 +722,18 @@ body.lock {
     -o-object-position: 0 40%;
        object-position: 0 40%;
   }
+}
+.advanced__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.advanced__background img {
+  -o-object-position: 100% 0;
+     object-position: 100% 0;
 }
 
 .content-advanced__title {
@@ -823,7 +824,8 @@ body.lock {
 }
 
 ._double-advanced {
-  background: url("/image/section-advanced/Information__background-double.png") 100% 26%/cover no-repeat;
+  /*    background: url("../the_future_now-1/image/section-advanced/Information__background-double.png") 100% 26% / cover
+     no-repeat; */
 }
 
 ._double-body {
@@ -845,8 +847,21 @@ body.lock {
   }
 }
 
+._double-image__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+._double-image__img img {
+  -o-object-position: 90% 88%;
+     object-position: 90% 88%;
+}
+
 /* //* ========================  Section prices ======================== */
 .prices {
+  position: relative;
   padding: 260px 0px;
 }
 @media (max-width: 768px) {
@@ -858,6 +873,10 @@ body.lock {
   .prices {
     padding: 90px 0px;
   }
+}
+.prices__body {
+  position: relative;
+  z-index: 1;
 }
 .prices__row {
   display: flex;
@@ -896,6 +915,17 @@ body.lock {
   .prices__item:not(:last-child) {
     margin-bottom: 2.5%;
   }
+}
+.prices__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.prices__image img {
+  -o-object-position: 100% 85%;
+     object-position: 100% 85%;
 }
 
 .item-prices {
