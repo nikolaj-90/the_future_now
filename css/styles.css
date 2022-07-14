@@ -168,7 +168,6 @@ h6 {
   font-family: Vollkorn;
   font-weight: 500;
   color: #f2f2f2;
-  background: url("/image/section-price/background-advanced.png") 90% 53%/cover no-repeat;
 }
 
 /* //* ======================== Header ======================== */
@@ -278,7 +277,6 @@ body.lock {
     width: 30px;
     height: 20px;
     z-index: 3;
-    /* margin: 0px 20px 0px 0px; */
   }
   .header__burger span {
     position: absolute;
@@ -346,7 +344,6 @@ body.lock {
 }
 /* //* ======================== Section future ======================== */
 .future {
-  /*    background: url('/image/main-screen/home__background.png') 0 0/cover no-repeat; */
   position: relative;
   /*    &__content {
   } */
@@ -646,7 +643,6 @@ body.lock {
 
 /* //* ======================== Section advanced ======================== */
 .advanced {
-  /* background: url("/image/section-advanced/background-advanced.png") 93% 5% / cover no-repeat; */
   position: relative;
   padding: 219px 0px;
 }
@@ -821,11 +817,6 @@ body.lock {
   .content-advanced__botton {
     margin-bottom: 25px;
   }
-}
-
-._double-advanced {
-  /*    background: url("../the_future_now-1/image/section-advanced/Information__background-double.png") 100% 26% / cover
-     no-repeat; */
 }
 
 ._double-body {
