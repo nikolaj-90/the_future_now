@@ -27,14 +27,20 @@
 }
 /* //* ======================== Pages ======================== */
 .page__future {
+   margin: 0px 0px -2px 0px;
 }
 .page__about {
-   margin-top: -2px;
-   padding-top: 2px;
+   margin: 0px 0px -2px 0px;
 }
 .page__advanced {
-   margin-top: -2px;
-   padding-top: 2px;
+   margin: 0px 0px -2px 0px;
+}
+.page__prices {
+   margin: 0px 0px -2px 0px;
+   font-family: Vollkorn;
+   font-weight: 500;
+   color: #f2f2f2;
+   background: url("/image/section-price/background-advanced.png") 90% 53% / cover no-repeat;
 }
 /* //* ======================== Header ======================== */
 body.lock {
@@ -203,7 +209,7 @@ body.lock {
 }
 /* //* ======================== Section future ======================== */
 .future {
-/*    background: url('/image/main-screen/home__background.png') 0 0/cover no-repeat; */
+   /*    background: url('/image/main-screen/home__background.png') 0 0/cover no-repeat; */
    position: relative;
    /*    &__content {
    } */
@@ -353,7 +359,7 @@ body.lock {
 }
 /* //* ======================== Section about ======================== */
 .about {
-   background: url('/image/section-about/About-us__background.png') 100% 88%/cover no-repeat;
+   background: url("/image/section-about/About-us__background.png") 100% 88% / cover no-repeat;
    position: relative;
    z-index: 1;
    padding: 116px 0px 108px;
@@ -369,12 +375,13 @@ body.lock {
          padding: 70px 0px;
       }
    }
+
    &__body {
       position: relative;
       z-index: 2;
    }
 
-  /*  &__img {
+   /*  &__img {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -449,7 +456,7 @@ body.lock {
 }
 /* //* ======================== Section advanced ======================== */
 .advanced {
-   background: url('/image/section-advanced/background-advanced.png') 93% 5%/cover no-repeat ;
+   background: url("/image/section-advanced/background-advanced.png") 93% 5% / cover no-repeat;
    position: relative;
    padding: 219px 0px;
    @media (max-width: 768px) {
@@ -462,16 +469,20 @@ body.lock {
          padding: 90px 0px 140px 0px;
       }
    }
-
+   @media (max-width: 320px) {
+      & {
+         padding: 60px 0px 50px;
+      }
+   }
    &__body {
       display: flex;
       flex-direction: row-reverse;
       position: relative;
       @media (max-width: 530px) {
-      & {
-         flex-direction: column;
+         & {
+            flex-direction: column;
+         }
       }
-   }
    }
 
    &__content {
@@ -499,7 +510,7 @@ body.lock {
          height: 100%;
          top: 0;
          left: 0;
-         border-radius: 10px;
+         border-radius: 32px;
          z-index: 2;
          object-position: 100% 0;
          object-fit: cover;
@@ -507,7 +518,16 @@ body.lock {
       @media (max-width: 530px) {
          & {
             width: 50%;
-            left: 10px;
+         }
+      }
+      @media (max-width: 430px) {
+         & {
+            width: 100%;
+            padding: 50%;
+         }
+         img {
+            border-radius: 5px;
+            object-position: 0 40%;
          }
       }
    }
@@ -549,8 +569,8 @@ body.lock {
       }
       @media (max-width: 530px) {
          &:not(:last-child) {
-         margin: 0px 0px 25px 0px;
-      }
+            margin: 0px 0px 25px 0px;
+         }
       }
    }
 
@@ -586,25 +606,136 @@ body.lock {
          }
       }
    }
-   
 }
-._double-advanced{
-background: url('/image/section-advanced/Information__background-double.png') 100% 85%/cover no-repeat;
+._double-advanced {
+   background: url("/image/section-advanced/Information__background-double.png") 100% 26% / cover no-repeat;
 }
 ._double-body {
-flex-direction: row;
-@media (max-width: 530px) {
+   flex-direction: row;
+
+   @media (max-width: 530px) {
       & {
          flex-direction: column;
+         flex-wrap: wrap-reverse;
       }
    }
 }
 ._double-content {
-margin: 0px 19% 0px 0px;
+   margin: 0px 19% 0px 0px;
+   @media (max-width: 320px) {
+      & {
+         margin: 0;
+      }
+   }
 }
 ._double-image {
-   
 }
+/* //* ========================  Section prices ======================== */
+.prices {
+   padding: 260px 0px;
+   @media (max-width: 768px) {
+      padding: 180px 0px;
+   }
+   @media (max-width: 430px) {
+      padding: 90px 0px;
+   }
+
+   &__body {
+   }
+
+   &__row {
+      display: flex;
+      margin: 0px -4.5%;
+      @media (max-width: 1200px) {
+         margin: 0px -2%;
+      }
+      @media (max-width: 768px) {
+         flex-wrap: wrap;
+         &:not(:last-child) {
+            margin-bottom: -2.5%;
+         }
+      }
+   }
+
+   &__item {
+      flex: 0 1 33.333%;
+      margin: 0px 4.5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @media (max-width: 1200px) {
+         margin: 0px 2%;
+      }
+      @media (max-width: 768px) {
+         & {
+            flex: 1 1 100%;
+         }
+         &:not(:last-child) {
+            margin-bottom: 2.5%;
+         }
+      }
+   }
+}
+.item-prices {
+   padding: 64px 0px;
+   background: rgba(4, 8, 13, 0.6);
+   border-radius: 32px;
+   box-shadow: -8px 8px 32px rgba(242, 58, 41, 0.25);
+   @media (max-width: 768px) {
+      padding: 45px 0px;
+   }
+   &__title {
+      transition: color 0.7s;
+      @include adaptiv-font(24, 18);
+      line-height: calc(33 / 24 * 100%);
+      a {
+         color: inherit;
+      }
+      &:not(:last-child) {
+         margin: 0px 0px 44px 0px;
+      }
+      &:hover {
+         text-decoration: underline;
+         color: #04f34c;
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin: 0px 0px 32px 0px;
+         }
+      }
+   }
+
+   &__text {
+      @include adaptiv-font(14, 12);
+      line-height: calc(20 / 14 * 100%);
+      & p:not(:last-child) {
+         margin: 0px 0px 24px 0px;
+      }
+      &:not(:last-child) {
+         margin: 0px 0px 92px 0px;
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin: 0px 0px 50px 0px;
+         }
+      }
+   }
+
+   &__price {
+      @include adaptiv-font(36, 28);
+      line-height: calc(50 / 36 * 100%);
+      transition: color 1s;
+      a {
+         color: inherit;
+      }
+      &:hover {
+         text-decoration: underline;
+         color: #047ff3;
+      }
+   }
+}
+
 /* //* ========================  Footer ======================== */
 .footer {
    background: #19050a;
